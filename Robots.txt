@@ -1,0 +1,14 @@
+# robots.txt pour autoriser Googlebot à explorer tout le site
+
+User-agent: Googlebot
+Disallow: 
+
+# Autoriser tous les robots à explorer tout le site
+User-agent: *
+Disallow: 
+
+# Optionnel : Bloquer certains répertoires ou fichiers (si besoin)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Vous pouvez ajouter d'autres User-agents si vous souhaitez spécifier des règles pour d'autres moteurs de recherche
