@@ -19,6 +19,19 @@ li {
   font-family: var(--text);
 }
 
+.particle {
+  background-color: chartreuse;
+  position: absolute;
+  z-index: 999;
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  top: 0;
+  right: 40%;
+}
+
 body {
   background-color: #f0f0f0;
   text-align: center;
