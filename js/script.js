@@ -118,4 +118,12 @@ btn.addEventListener("click", function () {
   agentName.textContent = randomAgent.name;
   agentImage.src = randomAgent.image;
   agentImage.style.display = "block";
+
+    anime({
+    targets: "#display",
+    opacity: [0, 1],
+    scale: [0.5, 1],
+    duration: 800,
+    easing: "easeOutElastic",
+  });
 });
