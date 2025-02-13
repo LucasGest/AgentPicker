@@ -111,6 +111,30 @@ const btn = document.getElementById("randomize-btn");
 const agentName = document.getElementById("agent-name");
 const agentImage = document.getElementById("agent-image");
 
+function createParticles() {
+  for (let i = 0; i < 30; i++) {
+    let particle = document.createElement("div");
+    particle.classList.add("particle");
+    document.body.appendChild(particle);
+
+    let x = Math.random() * window.innerWidth;
+    let y = Math.random() * window.innerHeight;
+
+    anime({
+      targets: particle,
+      translateX: [x, x + (Math.random() - 0.5) * 200],
+      translateY: [y, y + (Math.random() - 0.5) * 200],
+      opacity: [1, 0],
+      scale: [1, 0],
+      duration: 2000,
+      easing: "easeOutQuad",
+      complete: function (anim) {
+        particle.remove();
+      },
+    });
+  }
+}
+
 btn.addEventListener("click", function () {
   const randomAgent = agents[Math.floor(Math.random() * agents.length)];
 
@@ -126,4 +150,6 @@ btn.addEventListener("click", function () {
     duration: 800,
     easing: "easeOutElastic",
   });
+
+  createParticles();
 });
