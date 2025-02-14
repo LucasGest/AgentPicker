@@ -1039,3 +1039,10 @@ document
   .addEventListener("click", function () {
     document.getElementById("lightbox").style.display = "none";
   });
+
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    document.getElementById("lightbox").style.display = "none";
+  }
+});
