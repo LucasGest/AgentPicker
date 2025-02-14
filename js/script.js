@@ -1046,3 +1046,21 @@ document.addEventListener("keydown", function (event) {
     document.getElementById("lightbox").style.display = "none";
   }
 });
+
+function showFooter() {
+  anime({
+    targets: "#footer",
+    bottom: 0,
+    duration: 800,
+    easing: "easeOutExpo",
+  });
+}
+
+function hideFooter() {
+  anime({
+    targets: "#footer",
+    bottom: "-200px",
+    duration: 800,
+    easing: "easeInExpo",
+  });
+}
