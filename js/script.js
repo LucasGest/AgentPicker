@@ -593,13 +593,13 @@ const agents = [
           "ÉQUIPEZ-vous du Radar ultrason. TIREZ pour le déployer. Le radar détecte tous les sons générés par l'ennemi dans une zone. Il étourdit dans cette zone dès qu'il repère des bruits de pas, de tir ou tout autre son remarquable.",
       },
       {
-        img: "../img/abilities/wallDe.png",
+        img: "../img/abilities/WallDe.png",
         aname: "Disque Barrière",
         description:
           "ÉQUIPEZ-vous du disque barrière. TIREZ pour le lancer vers l'avant. À l'atterrissage, le disque déploie à partir du point d'origine une barrière bloquant l'avancée des agents.",
       },
       {
-        img: "../img/abilities/catchDe.png",
+        img: "../img/abilities/CatchDe.png",
         aname: "Gravnet",
         description:
           "ÉQUIPEZ-vous d'une grenade GravNet. TIREZ pour la lancer. Utilisez le TIR SECONDAIRE pour la lancer par en dessous. La GravNet explose à l'atterrissage, forçant tous les ennemis à portée à se baisser ou se déplacer au ralenti.",
@@ -1039,7 +1039,6 @@ document
   .addEventListener("click", function () {
     document.getElementById("lightbox").style.display = "none";
   });
-
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
