@@ -135,6 +135,172 @@
       </div>
     </main>
 
+    <div class="footer-btn" onclick="showFooter()">
+      <p>Afficher le footer</p>
+    </div>
+
+    <div class="footer" id="footer">
+      <ul>
+        <li><a href="menu/mentionlegale.html">Mention légale</a></li>
+      </ul>
+      <p>&copy; 2025 Lucanemone - Tous droits réservés.</p>
+      <button class="close-btn" onclick="hideFooter()">Fermer</button>
+    </div>
+
+    <div class="separate"></div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="img/icon.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tirage aléatoire d'agent Valorant</title>
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <meta
+      name="description"
+      content="Tirez au sort un agent de Valorant avec notre générateur aléatoire ! Choisissez votre équipe en quelques secondes et commencez à jouer !" />
+    <meta
+      name="keywords"
+      content="tirer au sort agent Valorant, générateur agent Valorant, choisir agent Valorant, tirage au sort Valorant, générateur aléatoire Valorant" />
+    <meta property="og:title" content="Tirage aléatoire d'agent Valorant" />
+    <meta
+      property="og:description"
+      content="Utilisez notre générateur pour tirer au sort un agent de Valorant et choisir rapidement votre personnage pour chaque partie. Parfait pour vos sessions de jeu avec des amis." />
+    <meta
+      property="og:image"
+      content="https://votresite.com/images/valorant-agent-sort.jpg" />
+    <meta property="og:type" content="website" />
+
+    <!-- URL of the Website -->
+    <meta
+      property="og:url"
+      content="https://agent-picker.vercel.app/agent.html" />
+  </head>
+  <body>
+    <div id="info">
+      <p>
+        Certaines images ne sont pas très bien dimensionnées, je m'en excuse par
+        avance !
+      </p>
+    </div>
+    <main>
+      <div class="container">
+        <h1>Tirage Aléatoire d'Agent Valorant</h1>
+        <div id="agent-container">
+          <p>Cliquez pour tirer un agent !</p>
+          <button id="randomize-btn">Tirer un agent</button>
+        </div>
+      </div>
+
+      <div id="display">
+        <div class="contentTextImg">
+          <img
+            id="agent-image"
+            src=""
+            alt="Image de l'agent"
+            style="display: none" />
+        </div>
+      </div>
+
+      <p id="bg-text">CLIQUEZ</p>
+
+      <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+          <p id="agent-name"></p>
+          <h3>Description</h3>
+          <p id="lightbox-text"></p>
+          <h3>Abilités</h3>
+          <div class="grid-abilities">
+            <div class="cardOne">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="" alt="" id="image-abilitiesone" />
+                </div>
+                <div class="card-back">
+                  <div class="content">
+                    <h4 id="lightbox-abilitiesone"></h4>
+                    <p id="lightbox-abilitiesdescone"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cardTwo">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="" alt="" id="image-abilitiestwo" />
+                </div>
+                <div class="card-back">
+                  <div class="content">
+                    <h4 id="lightbox-abilitiestwo"></h4>
+                    <p id="lightbox-abilitiesdesctwo"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cardThree">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="" alt="" id="image-abilitiesthree" />
+                </div>
+                <div class="card-back">
+                  <div class="content">
+                    <h4 id="lightbox-abilitiesthree"></h4>
+                    <p id="lightbox-abilitiesdescthree"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cardFour">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="" alt="" id="image-abilitiesfour" />
+                </div>
+                <div class="card-back">
+                  <div class="content">
+                    <h4 id="lightbox-abilitiesfour"></h4>
+                    <p id="lightbox-abilitiesdescfour"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button id="lightbox-close" class="lightbox-close">Fermer</button>
+        </div>
+      </div>
+    </main>
+
+    <div class="footer-btn" onclick="showFooter()">
+      <p>Afficher le footer</p>
+    </div>
+
+    <div class="footer" id="footer">
+      <ul>
+        <li><a href="menu/mentionlegale.html">Mention légale</a></li>
+      </ul>
+      <p>&copy; 2025 Lucanemone - Tous droits réservés.</p>
+      <button class="close-btn" onclick="hideFooter()">Fermer</button>
+    </div>
+
     <div class="separate"></div>
 
     <script src="js/script.js"></script>
