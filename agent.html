@@ -12,7 +12,11 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
     <meta
       name="description"
@@ -20,9 +24,7 @@
     <meta
       name="keywords"
       content="tirer au sort agent Valorant, générateur agent Valorant, choisir agent Valorant, tirage au sort Valorant, générateur aléatoire Valorant" />
-    <meta
-      property="og:title"
-      content="Tirage aléatoire d'agent Valorant" />
+    <meta property="og:title" content="Tirage aléatoire d'agent Valorant" />
     <meta
       property="og:description"
       content="Utilisez notre générateur pour tirer au sort un agent de Valorant et choisir rapidement votre personnage pour chaque partie. Parfait pour vos sessions de jeu avec des amis." />
@@ -30,7 +32,11 @@
       property="og:image"
       content="https://votresite.com/images/valorant-agent-sort.jpg" />
     <meta property="og:type" content="website" />
-    
+
+    <!-- URL of the Website -->
+    <meta
+      property="og:url"
+      content="https://agent-picker.vercel.app/agent.html" />
   </head>
   <body>
     <div id="info">
@@ -50,12 +56,81 @@
 
       <div id="display">
         <div class="contentTextImg">
-          <p id="agent-name"></p>
           <img
             id="agent-image"
             src=""
             alt="Image de l'agent"
             style="display: none" />
+        </div>
+      </div>
+
+      <p id="bg-text">CLIQUEZ</p>
+
+      <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+          <p id="agent-name"></p>
+          <h3>Description</h3>
+          <p id="lightbox-text"></p>
+          <h3>Abilités</h3>
+          <div class="grid-abilities">
+            <div class="cardOne">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="" alt="" id="image-abilitiesone" />
+                </div>
+                <div class="card-back">
+                  <div class="content">
+                    <h4 id="lightbox-abilitiesone"></h4>
+                    <p id="lightbox-abilitiesdescone"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cardTwo">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="" alt="" id="image-abilitiestwo" />
+                </div>
+                <div class="card-back">
+                  <div class="content">
+                    <h4 id="lightbox-abilitiestwo"></h4>
+                    <p id="lightbox-abilitiesdesctwo"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cardThree">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="" alt="" id="image-abilitiesthree" />
+                </div>
+                <div class="card-back">
+                  <div class="content">
+                    <h4 id="lightbox-abilitiesthree"></h4>
+                    <p id="lightbox-abilitiesdescthree"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cardFour">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="" alt="" id="image-abilitiesfour" />
+                </div>
+                <div class="card-back">
+                  <div class="content">
+                    <h4 id="lightbox-abilitiesfour"></h4>
+                    <p id="lightbox-abilitiesdescfour"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button id="lightbox-close" class="lightbox-close">Fermer</button>
         </div>
       </div>
     </main>
