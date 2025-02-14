@@ -1,22 +1,13 @@
 :root {
   --rouge: #ff4655;
   --text: "Montserrat", serif;
+  --agent-name-title: "Poppins", serif;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-a,
-li {
-  font-family: var(--text);
 }
 
 .particle {
@@ -32,9 +23,18 @@ li {
   right: 50%;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+li {
+  font-family: var(--text);
+}
+
 body {
   background-color: #f0f0f0;
-  text-align: center;
   overflow: hidden;
 }
 
@@ -47,11 +47,23 @@ body {
   right: -1%;
   width: 50%;
   height: 200%;
+  font-size: 100px;
+}
+
+#bg-text {
+  position: absolute;
+  z-index: -998;
+  top: 50%;
+  right: 5%;
+  font-size: 120px;
+  transform: rotate(40deg);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 #info {
   background-color: var(--rouge);
   padding: 20px 0px;
+  text-align: center;
 }
 
 main {
@@ -70,11 +82,14 @@ main {
   width: 100%;
   align-self: center;
   justify-self: center;
+  text-align: center;
 }
 
 #display {
   justify-self: center;
   align-items: center;
+  text-align: center;
+  width: auto;
 }
 
 h1 {
@@ -87,20 +102,32 @@ h1 {
 }
 
 #agent-name {
-  font-size: 18px;
-  font-weight: bold;
+  text-align: left;
+  font-size: 64px;
+  font-weight: 700;
+  /* color: transparent; */
+  background-image: linear-gradient(90deg, var(--rouge), red);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-family: var(--agent-name-title);
+}
+
+.bg-name {
+  z-index: 999;
+  position: absolute;
+  top: 5%;
+  right: 0%;
+  width: 300px;
+  height: 50px;
 }
 
 img {
-  margin-top: 50px;
+  margin-top: 0px;
   width: 300px;
   height: 100%;
+  cursor: pointer;
 }
-
-/* img.bg {
-  width: 100%;
-  height: auto;
-} */
 
 button {
   padding: 10px 20px;
@@ -116,6 +143,119 @@ button {
 
 button:hover {
   background-color: var(--rouge);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.lightbox-content {
+  background: white;
+  color: black;
+  padding: 20px 50px;
+  border-radius: 5px;
+  max-width: 1200px;
+}
+
+.grid-abilities {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-content: center;
+}
+
+.cardOne,
+.cardTwo,
+.cardThree,
+.cardFour {
+  width: 220px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+}
+
+.cardOne:hover .card-inner,
+.cardTwo:hover .card-inner,
+.cardThree:hover .card-inner,
+.cardFour:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.card-front {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: var(--rouge);
+}
+
+#image-abilitiesone,
+#image-abilitiestwo,
+#image-abilitiesthree,
+#image-abilitiesfour {
+  align-items: center;
+  width: 50%;
+  height: auto;
+}
+
+.card-back {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--rouge);
+  color: black;
+  transform: rotateY(180deg);
+  padding: 10px;
+  font-size: 14px;
+}
+
+.card-back h4 {
+  text-align: center;
+  color: white;
+}
+
+.card-back p {
+  color: white;
+  font-size: 12px;
+}
+
+.lightbox-content h3 {
+  text-align: left;
+  padding: 20px 0px;
+}
+
+.lightbox-close {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#lightbox-text {
+  padding: 0;
+  margin: 0;
 }
 
 @media screen and (max-width: 480px) {
