@@ -261,6 +261,51 @@ button:hover {
   margin: 0;
 }
 
+.footer {
+  position: fixed;
+  bottom: -200px;
+  left: 0;
+  width: 100%;
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-btn {
+  position: absolute;
+  width: 200px;
+  bottom: 0;
+  left: 50%;
+  padding: 10px 20px;
+  transform: translate(-50%);
+  background: #444;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.footer ul li {
+  list-style-type: none;
+}
+
+.footer ul li a {
+  color: white;
+}
+
+.close-btn {
+  display: block;
+  margin: 10px auto;
+  padding: 5px 10px;
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 @media screen and (max-width: 480px) {
   h1 {
     font-size: 1.2rem;
