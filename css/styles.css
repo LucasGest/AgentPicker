@@ -236,11 +236,14 @@ button:hover {
 .card-back h4 {
   text-align: center;
   color: white;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .card-back p {
   color: white;
   font-size: 12px;
+  line-height: 20px;
 }
 
 .lightbox-content h3 {
